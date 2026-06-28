@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Mandatory Networking and Streaming permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="34">
+
+        <!-- 1. Splash Screen Launcher Activity -->
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 2. Main WebView Hybrid Hub -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication" />
+
+        <!-- 3. Native Dashboard -->
+        <activity
+            android:name=".activities.HomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication" />
+
+        <!-- 4. Course Details Screen -->
+        <activity
+            android:name=".activities.CourseActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication" />
+
+        <!-- 5. Subject Screen -->
+        <activity
+            android:name=".activities.SubjectActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication" />
+
+        <!-- 6. Video Stream ExoPlayer Activity (PIP and Rotations optimized) -->
+        <activity
+            android:name=".activities.PlayerActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:supportsPictureInPicture="true"
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication" />
+
+        <!-- 7. Native PDF Study Guide Activity -->
+        <activity
+            android:name=".activities.PdfActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication" />
+
+        <!-- 8. Offline Downloads Activity -->
+        <activity
+            android:name=".activities.DownloadActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication" />
+
+        <!-- 9. Student Profile Activity -->
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication" />
+
+        <!-- 10. System Settings Activity -->
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication" />
+
+    </application>
+
+</manifest>

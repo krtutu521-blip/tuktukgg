@@ -1,0 +1,6 @@
+{
+  "name": "APPX Learn",
+  "description": "Premium online learning and course streaming platform featuring WebView hybrid interfaces, ExoPlayer and native PDF readers with an elegant glassmorphism/neon design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
